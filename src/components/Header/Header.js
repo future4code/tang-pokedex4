@@ -10,6 +10,7 @@ const Header = () => {
             <Title>Lista de Pokemons</Title>
         </DivTitle>
     </DivHeader>
+    
   );
 };
 
