@@ -4,7 +4,7 @@ import { MeioPagina, ImagemPoke, CardPoderes, CardAtaques} from "./styled";
 
 const PerfilPokemon = () => {
     return (
-        <body>
+        <BodyPerfil>
         <MeioPagina>
           <ImagemPoke>
             <img src={pokefrente}/>
@@ -28,7 +28,7 @@ const PerfilPokemon = () => {
           <p>swords-dance</p>
           </CardAtaques>
         </MeioPagina>
-        </body>
+        </BodyPerfil>
           );
     };
     
