@@ -1,49 +1,53 @@
 import styled from 'styled-components';
+import imagemFundo from '../img/fundo.png';
 
-export const BodyTotal = styled.body`
-background-color: #e64110;
-height: 100%;
-margin-left: 0px;
-margin-right: 0px;
-`
+
+
 export  const MeioPagina = styled.main`
-height: 100vh;
-margin: 20px 10vw;
-margin-top: 50px;
-margin-right: 10vw;
-margin-bottom: 20px;
-margin-left: 10vw;
 display: flex;
-justify-content: space-evenly;
-background-color: #626262;
+background-attachment: fixed;
+background-position: center;
+background-size: 100%;
+background-position: 20% 40%;
+background-image: url(${imagemFundo});
 `
 export  const ImagemPoke = styled.div`
 align-self: center;
-height: 60%;
+height: 270px;
 display: flex;
-flex-direction: column;
--webkit-box-pack: justify;
-justify-content: space-between;
+margin-left: 30%;
+position: fixed;
 `
-export const CardPoderes = styled.div`
-background: rgb(241, 241, 241);
+export  const ImagemPoke2 = styled.div`
 align-self: center;
-height: 75%;
-width: 300px;
+height: 250px;
+display: flex;
+margin-left: 60%;
+position: fixed;
+`
+
+export const CardPoderes = styled.div`
+height: 400px;
+width: 200px;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
-padding-left: 20px;
+padding-left: 80px;
 font-size: 16px;
-color: black;
+color: whitesmoke;
+margin-inline-start: 69px;
+margin-top: 100px;
+background-color: black;
 `
 export const CardAtaques = styled.div`
-background: rgb(241, 241, 241);
-align-self: center;
-height: 75%;
-width: 300px;
+height: 400px;
+width: 200px;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
-padding-left: 20px;
+padding-left: 80px;
+font-size: 16px;
+color: whitesmoke;
+margin-inline-start: 69px;
+margin-top: 100px;
+background-color: black;
+margin-left: 50%;
 `

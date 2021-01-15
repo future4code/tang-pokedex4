@@ -1,14 +1,18 @@
 import React from "react";
-import { MeioPagina, ImagemPoke, CardPoderes, CardAtaques} from "./styled";
-
+import { MeioPagina, ImagemPoke, ImagemPoke2, CardPoderes, CardAtaques} from "./styled";
+import imagemPikachuFrente from "../img/PikachuFrente.png";
+import imagemPikachuCostas from "../img/PikachuCostas.png";
 
 const PerfilPokemon = () => {
     return (
       <MeioPagina>
+        
           <ImagemPoke>
-            <img src={"https://picsum.photos/seed/picsum/20/30"} alt="frente"/>
-            <img src={"https://picsum.photos/seed/picsum/20/30"} alt="costas"/>
+          <img src={imagemPikachuFrente} alt="Pikachu" width="150px" height="150px" />
           </ImagemPoke>
+          <ImagemPoke2>
+          <img src={imagemPikachuCostas} alt="Pikachu" width="150px" height="150px" />
+          </ImagemPoke2>
           <CardPoderes>
             <h2>Poderes 🔥</h2>
             <p>hp: 78</p>
@@ -26,6 +30,7 @@ const PerfilPokemon = () => {
           <p>fire</p>
           <p>swords-dance</p>
           </CardAtaques>
+          
         </MeioPagina>
           );
     };
