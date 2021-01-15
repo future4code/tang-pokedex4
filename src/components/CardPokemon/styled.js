@@ -6,7 +6,7 @@ height: 100vh;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-background-color: #626262;
+background-color: #c81512;
 padding-top: 15px;
 `
 export const DivCard = styled.div`
@@ -27,10 +27,10 @@ padding: 5px;
 height: 40px;
 width: 75%;
 margin-left: 30px; 
-background-color: #e64110;
+background-color: black;
 border-radius: 10px;
 color: whitesmoke;
-border-color: #e64110;
+border-color:black;
 `
 
 

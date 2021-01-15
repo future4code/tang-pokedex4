@@ -15,13 +15,13 @@ margin: auto;
 export const ButtonPokedex = styled.button`
 width: 150px;    
 height: 30px;
-background-color: #e64110;
+background-color: black;
 position: absolute;
 left: 30px;
 top: 30px;  
 border-radius: 10px; 
 color: whitesmoke; 
-border-color: #e64110
+border-color: black;
 `
 
 export const Title = styled.h1`
