@@ -1,5 +1,7 @@
 import React from "react";
 import HomePage from "../screens/HomePage/HomePage";
+import Pokedex from "../screens/Pokedex/Pokedex";
+import Profile from "../screens/Profile/Profile";
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 
 const Router = () => {
@@ -9,8 +11,11 @@ const Router = () => {
       <Route exact path={"/"}>
         <HomePage/>
       </Route>      
-      <Route>
-        <HomePage/>
+      <Route exact path={"/pokedex"}>
+        <Pokedex />
+      </Route>
+      <Route exact path={"/profile"}>
+        <Profile />
       </Route>
     </Switch>
   </BrowserRouter>
