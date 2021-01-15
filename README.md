@@ -1,16 +1,19 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Rafael
+- Bruna
+- Paula
 
 Link do Surge: www.link.com.br
 
 O que funciona:
-- Item 1
-- Item 2
+- Router
+- Navegação
+- ALteração dinâmica do Header (Trocar título e botão conforme a página)
 
 O que não funciona: 
-- Item 3
-- Item 4
+- renderização da API
+- Add Pokedex
+- Profile sem mock
+- Desafio
