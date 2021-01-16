@@ -5,8 +5,7 @@ import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/urls";
 
 const HomePage = () => {
-  const pokemonsData = useRequestData([], BASE_URL)
-  console.log(pokemonsData)
+  
 
   return (
     <div>

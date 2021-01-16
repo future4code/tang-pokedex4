@@ -1,32 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { goToProfile } from "../../routes/coordinator";
 import { MainCard, DivCard, DivImg, ButtonCard  } from "./styled";
-import imagemPikachu from "../img/pikachu.png";
-import imagemPokezinho from "../img/pokezinho.png";
+import useRequest from '../../context/GlobalContextData';
 
 const CardPokemon = () => {
   const history = useHistory();
+  const {data, getData, pokemonId, setpokemonId} = useRequest()
+
+  useEffect(() => {
+    getData()    
+  },[]);
+  
+
+  console.log(data)
+
+  // const pokemonList = data.map((value) => {
+  //   return (
+  //     <MainCard>
+  //       <DivCard>
+  //         <DivImg>
+  //             <img src={value.name} alt="Pokemon" width="100px" height="150px" />
+  //         </DivImg>
+  //         <ButtonCard>Adicionar ao Pokedex </ButtonCard>
+  //         <ButtonCard onClick={() => { goToProfile(history)}}>Ver detalhes</ButtonCard>
+  //       </DivCard>
+  //     </MainCard>
+  //   )
+  // })
 
   return (
-    <MainCard>
-    <DivCard>
-      <DivImg>
-          <img src={imagemPikachu} alt="Pikachu" width="100px" height="150px" />
-      </DivImg>
-        <ButtonCard>Adicionar ao Pokedex </ButtonCard>
-        <ButtonCard onClick={() => { goToProfile(history)}}>Ver detalhes</ButtonCard>
-    </DivCard>
-    
-    <DivCard>
-      <DivImg>
-          <img src={imagemPokezinho} alt="Pokemon" width="100px" height="150px" />
-      </DivImg>
-        <ButtonCard>Adicionar ao Pokedex </ButtonCard>
-        <ButtonCard onClick={() => { goToProfile(history)}}>Ver detalhes</ButtonCard>
-    </DivCard>
-    </MainCard>
-  );
-};
+    <div>
+      {/* {pokemonList} */}
+    </div>      
+  )
+}
 
 export default CardPokemon;
