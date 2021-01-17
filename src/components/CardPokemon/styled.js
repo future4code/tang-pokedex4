@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainCard = styled.main`
 width: 100vw;
-height: 100vh;
+height: fit-content;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
@@ -11,13 +11,15 @@ padding-top: 15px;
 `
 export const DivCard = styled.div`
 background-color: rgb(241, 241, 241);
-display: grid;
-align-items: center;
-height: 45vh;
+display: flex;
+flex-direction: column;
+align-items: space-evenly;
+height: fit content;
 width: 250px;
+margin: 15px;
 `
 export const DivImg = styled.div`
-height: 150px;
+height: 70px;
 padding: 20px;
 padding-left: 70px;
 `

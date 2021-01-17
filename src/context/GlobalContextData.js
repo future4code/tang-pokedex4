@@ -12,8 +12,10 @@ export const RequestProvider = ({children}) =>{
     const getData  = () => {
       axios
         .get(BASE_URL)
-        .then((response) => setData(response.data.results))
-        .catch((error) => console.log(error.message));      
+        .then((response) => {
+          console.log("response:",response);
+          setData(response.data.results)
+        }).catch((error) => console.log(error.message));      
     };
     
     
