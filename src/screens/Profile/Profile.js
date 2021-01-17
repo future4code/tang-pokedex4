@@ -8,8 +8,7 @@ const Profile = () => {
   return (
     <div>
       <Header />
-      <PerfilPokemon />
-      
+      <PerfilPokemon />      
     </div>
   );
 };
