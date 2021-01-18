@@ -1,38 +1,27 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { goToProfile } from "../../routes/coordinator";
-import { MainCard, DivCard, DivImg, ButtonCard  } from "./styled";
+import { DivCard, DivImg, ButtonCard, PokeImg  } from "./styled";
 import useRequest from '../../context/GlobalContextData';
 
 const CardPokemon = () => {
   const history = useHistory();
-  const {data, getData, pokemonId, setpokemonId} = useRequest()
-
-  useEffect(() => {
-    getData()    
-  },[]);
+  const { pokemon } = useRequest();    
   
-
-  console.log(data)
-
-  // const pokemonList = data.map((value) => {
-  //   return (
-  //     <MainCard>
-  //       <DivCard>
-  //         <DivImg>
-  //             <img src={value.name} alt="Pokemon" width="100px" height="150px" />
-  //         </DivImg>
-  //         <ButtonCard>Adicionar ao Pokedex </ButtonCard>
-  //         <ButtonCard onClick={() => { goToProfile(history)}}>Ver detalhes</ButtonCard>
-  //       </DivCard>
-  //     </MainCard>
-  //   )
-  // })
-
   return (
-    <div>
-      {/* {pokemonList} */}
-    </div>      
+    <>
+      {pokemon.map((value) => {
+        return (          
+            <DivCard key={value.name}>
+              <DivImg>
+                  <PokeImg src={value.sprites.front_default} alt="Pokemon"/>
+              </DivImg>
+              <ButtonCard>Adicionar ao Pokedex </ButtonCard>
+              <ButtonCard onClick={() => { goToProfile(history, value.name)}}>Ver detalhes</ButtonCard>
+            </DivCard>         
+        )
+      })}   
+    </>
   )
 }
 

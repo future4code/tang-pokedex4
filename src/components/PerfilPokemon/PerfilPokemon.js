@@ -1,34 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MeioPagina, ImagemPoke, ImagemPoke2, CardPoderes, CardAtaques} from "./styled";
-import imagemPikachuFrente from "../img/PikachuFrente.png";
-import imagemPikachuCostas from "../img/PikachuCostas.png";
+import { useParams } from "react-router-dom";
+import useRequest from '../../context/GlobalContextData';
+
 
 const PerfilPokemon = () => {
+    const {name} = useParams()
+    const { pokemon } = useRequest();
+    const [selectedPokemon, setSelectedPokemon] = useState({});  
+
+    useEffect(() => {
+      const dataPokemon = pokemon.find((item) => {
+        return item.name === name        
+      })
+      setSelectedPokemon(dataPokemon)
+    },[])
+
     return (
-      <MeioPagina>
-        
+      <MeioPagina>          
           <ImagemPoke>
-          <img src={imagemPikachuFrente} alt="Pikachu" width="150px" height="150px" />
+          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.front_default} alt="Pikachu" width="150px" height="150px" />
           </ImagemPoke>
           <ImagemPoke2>
-          <img src={imagemPikachuCostas} alt="Pikachu" width="150px" height="150px" />
+          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.back_default} alt="Pikachu" width="150px" height="150px" />
           </ImagemPoke2>
           <CardPoderes>
-            <h2>Poderes 🔥</h2>
-            <p>hp: 78</p>
-            <p>attack: 84</p>
-            <p>defense: 78</p>
-            <p>special-attack: 109</p>
-            <p>special-defense: 85</p>
-            <p>speed: 100</p>
+            <h2>Poderes</h2>
+            { selectedPokemon && selectedPokemon.stats &&
+              selectedPokemon.stats.map((value) => {
+                return (
+                  <p key={value.stat.name}>
+                    <strong>{value.stat.name}:</strong>{value.base_stat}
+                  </p>
+                )
+
+              })
+            }           
           </CardPoderes>
-          <CardAtaques><h2>Ataques ⚔️</h2>
-          <p>mega-punch</p>
-          <p>fire-punch</p>
-          <p>thunder-punch</p>
-          <p>scratch</p>
-          <p>fire</p>
-          <p>swords-dance</p>
+          <div>
+              { selectedPokemon && selectedPokemon.types &&
+                selectedPokemon.types.map((type) => {
+                  return <p key={type.type.name}>{type.type.name}{type.type.name}</p>
+                })
+              }      
+          </div>
+          <CardAtaques>
+            <h2>Principais ataques</h2>
+            {selectedPokemon && selectedPokemon.moves &&
+              selectedPokemon.moves.map((moves, index) => {
+                return (
+                  index < 5 && <p key={moves.move.name}>{moves.move.name}</p>
+                )
+              })
+          }
           </CardAtaques>
           
         </MeioPagina>

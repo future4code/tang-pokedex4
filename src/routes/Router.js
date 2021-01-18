@@ -14,7 +14,7 @@ const Router = () => {
       <Route exact path={"/pokedex"}>
         <Pokedex />
       </Route>
-      <Route exact path={"/profile"}>
+      <Route exact path={"/profile/:name"}>
         <Profile />
       </Route>
     </Switch>

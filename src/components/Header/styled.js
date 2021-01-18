@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DivHeader = styled.div`
 width: 100vw;
-height: 90px;
+height: 8vh;
 background-color: #104a8b;
 display: flex;
 position: relative;
