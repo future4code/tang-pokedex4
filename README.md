@@ -5,15 +5,15 @@ Nome dos integrantes:
 - Bruna
 - Paula
 
-Link do Surge: www.link.com.br
+Link do Surge: shaggy-dirt.surge.sh
 
 O que funciona:
 - Router
 - Navegação
 - ALteração dinâmica do Header (Trocar título e botão conforme a página)
-
-O que não funciona: 
 - renderização da API
 - Add Pokedex
 - Profile sem mock
-- Desafio
+
+O que não funciona: 
+- Desafios
