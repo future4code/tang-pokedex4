@@ -13,16 +13,16 @@ background-image: url(${imagemFundo});
 `
 export  const ImagemPoke = styled.div`
 align-self: center;
-height: 270px;
+height: 700px;
 display: flex;
-margin-left: 30%;
+margin-left: 10%;
 position: fixed;
 `
 export  const ImagemPoke2 = styled.div`
 align-self: center;
-height: 250px;
+height: 700px;
 display: flex;
-margin-left: 60%;
+margin-left: 85%;
 position: fixed;
 `
 
@@ -31,11 +31,11 @@ height: 400px;
 width: 200px;
 display: flex;
 flex-direction: column;
-padding-left: 80px;
+padding-left: 50px;
 font-size: 16px;
 color: whitesmoke;
 margin-inline-start: 69px;
-margin-top: 100px;
+margin-top: 300px;
 background-color: black;
 `
 export const CardAtaques = styled.div`
@@ -43,11 +43,12 @@ height: 400px;
 width: 200px;
 display: flex;
 flex-direction: column;
-padding-left: 80px;
+padding-left: 50px;
 font-size: 16px;
 color: whitesmoke;
 margin-inline-start: 69px;
-margin-top: 100px;
+margin-top: 300px;
 background-color: black;
 margin-left: 50%;
+margin-right: 50px;
 `

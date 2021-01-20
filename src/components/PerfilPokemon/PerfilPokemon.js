@@ -19,10 +19,10 @@ const PerfilPokemon = () => {
     return (
       <MeioPagina>          
           <ImagemPoke>
-          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.front_default} alt="Pikachu" width="150px" height="150px" />
+          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.front_default} alt="Pikachu" width="150px" height="250px" />
           </ImagemPoke>
           <ImagemPoke2>
-          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.back_default} alt="Pikachu" width="150px" height="150px" />
+          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.back_default} alt="Pikachu" width="150px" height="250px" />
           </ImagemPoke2>
           <CardPoderes>
             <h2>Poderes</h2>
