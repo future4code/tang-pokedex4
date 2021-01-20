@@ -19,10 +19,10 @@ const PerfilPokemon = () => {
     return (
       <MeioPagina>          
           <ImagemPoke>
-          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.front_default} alt="Pikachu" width="150px" height="250px" />
+          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.front_default} alt="POkemon" width="100%"  />
           </ImagemPoke>
           <ImagemPoke2>
-          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.back_default} alt="Pikachu" width="150px" height="250px" />
+          <img src={selectedPokemon && selectedPokemon.sprites && selectedPokemon.sprites.back_default} alt="POkemon" width="100%"  />
           </ImagemPoke2>
           <CardPoderes>
             <h2>Poderes</h2>
@@ -40,7 +40,7 @@ const PerfilPokemon = () => {
           <div>
               { selectedPokemon && selectedPokemon.types &&
                 selectedPokemon.types.map((type) => {
-                  return <p key={type.type.name}>{type.type.name}{type.type.name}</p>
+                  return <p key={type.type.name}>{type.type.name}</p>            
                 })
               }      
           </div>
