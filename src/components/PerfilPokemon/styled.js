@@ -12,18 +12,22 @@ background-position: 20% 40%;
 background-image: url(${imagemFundo});
 `
 export  const ImagemPoke = styled.div`
-align-self: center;
-height: 700px;
-display: flex;
-margin-left: 10%;
 position: fixed;
+height: 250px;
+width: 250px;
+display: flex;
+left: 10%;
+position: fixed;
+top: 5vh;
 `
 export  const ImagemPoke2 = styled.div`
 align-self: center;
-height: 700px;
+height: 250px;
+width: 250px;
 display: flex;
 margin-left: 85%;
 position: fixed;
+top: 5vh;
 `
 
 export const CardPoderes = styled.div`

@@ -12,20 +12,23 @@ const Header = () => {
     case "/":
       destino = {
         texto: "Ir para Pokedex",
-        função: () => { goToPokedex(history) }
+        função: () => { goToPokedex(history) },
+        titulo: "Lista de Pokemons"
       }
       break;
     case "/pokedex":
       destino = {
         texto: "Ir para Home",
-        função: () => { goToHome(history) }
+        função: () => { goToHome(history) },
+        titulo: "Pokedex"
       }
       break;
 
     default:
       destino = {
         texto: "Voltar",
-        função: () => { history.goBack() }
+        função: () => { history.goBack() },
+        titulo: ""
       }
       break;
   }
@@ -36,7 +39,7 @@ const Header = () => {
         {destino.texto}
       </ButtonPokedex>
       <DivTitle>
-        <Title>Lista de Pokemons</Title>
+        <Title>{destino.titulo}</Title>
       </DivTitle>
     </DivHeader>
 
